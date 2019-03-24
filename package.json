@@ -1,11 +1,11 @@
 {
-  "name": "consolog",
-  "version": "1.0.0",
+  "name": "konsolog",
+  "version": "0.0.1",
   "description": "The Console API you didn't know you need",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/caroso1222/consolog",
+  "repository": "https://github.com/caroso1222/konsolog",
   "license": "MIT",
   "keywords": [],
   "scripts": {
