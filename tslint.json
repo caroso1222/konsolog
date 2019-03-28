@@ -10,6 +10,7 @@
     /* tslint-immutable rules */
     // Recommended built-in rules
     "no-var-keyword": true,
+    "prefer-object-spread": false,
     "no-parameter-reassignment": true,
     "typedef": [true, "call-signature"],
 

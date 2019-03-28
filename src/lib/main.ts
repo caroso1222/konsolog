@@ -1,9 +1,12 @@
 import { Konsolog } from "./konsolog";
 import * as operators from './operators';
 import { IKonsolog } from "./konsolog.interface";
+import noLog from './no-log';
 
 export const console: IKonsolog = (() => {
-  const newConsole = new Konsolog();
+  const konsolog = new Konsolog();
+
+  const newConsole = Object.assign(konsolog, noLog);
 
   Object.keys(operators).forEach(key => {
     const fn = function(this: Konsolog, ...args: any): Konsolog {

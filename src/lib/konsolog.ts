@@ -7,6 +7,7 @@ export class Konsolog {
       .map(prop => `${prop}: ${this.styles[prop]}`)
       .join('; ')
     this.console.log(`%c${value}`, styleString);
+    this.styles = {};
     return styleString;
   }
 }
