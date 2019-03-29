@@ -1,9 +1,9 @@
 import { Konsolog } from "./konsolog";
 import * as operators from './operators';
-import { IKonsolog } from "./konsolog.interface";
+import * as functions from './functions';
 import noLog from './no-log';
 
-export const console: IKonsolog = (() => {
+export default (() => {
   const konsolog = new Konsolog();
 
   const newConsole = Object.assign(konsolog, noLog);
@@ -20,5 +20,9 @@ export const console: IKonsolog = (() => {
     Object.defineProperty(newConsole, key, isGetter ? { get: fn } : { value: fn });
   });
 
-  return newConsole as any;
+  Object.keys(functions).forEach(key => {
+    Object.defineProperty(newConsole, key, { value: functions[key].bind(newConsole) });
+  })
+
+  return newConsole;
 })();

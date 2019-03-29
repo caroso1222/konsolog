@@ -13,13 +13,14 @@
     "prefer-object-spread": false,
     "no-parameter-reassignment": true,
     "typedef": [true, "call-signature"],
+    "no-empty-interface": false,
 
     // Immutability rules
     "readonly-keyword": false,
-    "readonly-array": true,
+    "readonly-array": false,
     "max-classes-per-file": false,
-    "no-let": true,
-    "no-object-mutation": true,
+    "no-let": false,
+    "no-object-mutation": false,
     "no-delete": true,
     "no-method-signature": true,
     "no-this": false,

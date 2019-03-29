@@ -1,6 +1,6 @@
 export class Konsolog {
+  public readonly console: Console = console;
   private styles: Partial<CSSStyleDeclaration> = {};
-  private readonly console: Console = console;
 
   public log(value: string): string {
     const styleString = Object.keys(this.styles)
