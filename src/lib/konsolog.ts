@@ -5,10 +5,9 @@ export class Konsolog {
   public log(value: string): string {
     const styleString = Object.keys(this.styles)
       .map(prop => `${prop}: ${this.styles[prop]}`)
-      .join('; ')
+      .join('; ');
     this.console.log(`%c${value}`, styleString);
     this.styles = {};
     return styleString;
   }
 }
-

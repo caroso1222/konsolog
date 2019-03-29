@@ -1,3 +1,3 @@
 export function lg(): Record<string, string> {
-  return { 'font-size': '32px' }
+  return { 'font-size': '32px' };
 }

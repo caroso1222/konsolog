@@ -1,3 +1,3 @@
 export function italic(): Record<string, string> {
-  return { 'font-style': 'italic' }
+  return { 'font-style': 'italic' };
 }

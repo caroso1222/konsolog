@@ -1,4 +1,4 @@
-import { Konsolog } from "../../konsolog";
+import { Konsolog } from '../../konsolog';
 
 export function loading(this: Konsolog, _window?: Window): void {
   const loadingSVG = `<svg class="lds-message" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 160 100" preserveAspectRatio="xMidYMid"><g transform="translate(20 50)">
@@ -16,6 +16,9 @@ export function loading(this: Konsolog, _window?: Window): void {
 </g></svg>`;
   const base64 = (_window || window).btoa(loadingSVG);
 
-  const style = "background: url('data:image/svg+xml;base64," + base64 + "') left top no-repeat; font-size: 16px;";
+  const style =
+    "background: url('data:image/svg+xml;base64," +
+    base64 +
+    "') left top no-repeat; font-size: 16px;";
   this.console.log('%c     ', style);
 }
